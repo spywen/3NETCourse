@@ -1,0 +1,7 @@
+﻿Name:My Config Name
+Last-Modified:Two days ago
+Shortcut-Close:Alt F4
+Shortcut-Open:Ctrl O
+Shortcut-SelectAll:Ctrl A
+Company:SUPINFO
+Purpose:Test Config File

@@ -1,0 +1,54 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Business="using:UniversalAppCsharpBindings.Business"
+    xmlns:Converter="using:UniversalAppCsharpBindings.Convert"
+    x:Class="UniversalAppCsharpBindings.MainPage"
+    mc:Ignorable="d">
+    
+    <Page.Resources>
+        <Converter:DateConverter x:Key="dateConverter"/>
+        <Converter:YearDateConverter x:Key="yearDateConverter"/>
+    </Page.Resources>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Margin="40,40,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="200"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="400"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            
+            <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding Name}" FontSize="50"></TextBlock>
+            <StackPanel Grid.Row="1" Grid.Column="0" x:Name="SelectedMoviePanel" DataContext="{Binding SelectedItem, ElementName=MyGridView}">
+                <Image Width="150" Height="Auto" VerticalAlignment="Stretch" Source="{Binding Image, Mode=TwoWay}"/>
+                <TextBox Text="{Binding Name, Mode=TwoWay}"/>
+                <TextBox Text="{Binding Director, Mode=TwoWay}"/>
+                <DatePicker Date="{Binding Year, Mode=TwoWay, Converter={StaticResource dateConverter}}" DayVisible="False" MonthVisible="False"></DatePicker>
+            </StackPanel>
+
+            <GridView Grid.Row="1" Grid.Column="1" x:Name="MyGridView" HorizontalAlignment="Stretch">
+                <GridView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Margin="10">
+                            <Image Width="150" Height="200" Source="{Binding Image, Mode=TwoWay}"/>
+                            <TextBlock FontSize="16" Text="{Binding Name, Mode=TwoWay}"/>
+                            <TextBlock FontSize="10" Text="{Binding Director, Mode=TwoWay}"/>
+                            <TextBlock FontSize="10" Text="{Binding Year, Mode=TwoWay, Converter={StaticResource yearDateConverter}}"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </GridView.ItemTemplate>
+            </GridView>
+        </Grid>
+        
+    </Grid>
+</Page>

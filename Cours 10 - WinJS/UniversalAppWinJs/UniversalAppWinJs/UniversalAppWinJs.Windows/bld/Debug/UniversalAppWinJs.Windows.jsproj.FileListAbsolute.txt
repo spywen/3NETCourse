@@ -1,0 +1,15 @@
+C:\Users\Laurent\Desktop\UniversalAppWinJs\UniversalAppWinJs\UniversalAppWinJs.Windows\bin\Debug\ReverseMap\resources.pri
+C:\Users\Laurent\Desktop\UniversalAppWinJs\UniversalAppWinJs\UniversalAppWinJs.Windows\bin\Debug\AppxManifest.xml
+C:\Users\Laurent\Desktop\UniversalAppWinJs\UniversalAppWinJs\UniversalAppWinJs.Windows\bin\Debug\UniversalAppWinJs.Windows.build.appxrecipe
+C:\Users\Laurent\Desktop\UniversalAppWinJs\UniversalAppWinJs\UniversalAppWinJs.Windows\bld\Debug\priconfig.xml
+C:\Users\Laurent\Desktop\UniversalAppWinJs\UniversalAppWinJs\UniversalAppWinJs.Windows\bld\Debug\priconfig.xml.intermediate
+C:\Users\Laurent\Desktop\UniversalAppWinJs\UniversalAppWinJs\UniversalAppWinJs.Windows\bld\Debug\layout.resfiles
+C:\Users\Laurent\Desktop\UniversalAppWinJs\UniversalAppWinJs\UniversalAppWinJs.Windows\bld\Debug\layout.resfiles.intermediate
+C:\Users\Laurent\Desktop\UniversalAppWinJs\UniversalAppWinJs\UniversalAppWinJs.Windows\bld\Debug\resources.resfiles
+C:\Users\Laurent\Desktop\UniversalAppWinJs\UniversalAppWinJs\UniversalAppWinJs.Windows\bld\Debug\resources.resfiles.intermediate
+C:\Users\Laurent\Desktop\UniversalAppWinJs\UniversalAppWinJs\UniversalAppWinJs.Windows\bld\Debug\pri.resfiles
+C:\Users\Laurent\Desktop\UniversalAppWinJs\UniversalAppWinJs\UniversalAppWinJs.Windows\bld\Debug\pri.resfiles.intermediate
+C:\Users\Laurent\Desktop\UniversalAppWinJs\UniversalAppWinJs\UniversalAppWinJs.Windows\bld\Debug\qualifiers.txt
+C:\Users\Laurent\Desktop\UniversalAppWinJs\UniversalAppWinJs\UniversalAppWinJs.Windows\bld\Debug\qualifiers.txt.intermediate
+C:\Users\Laurent\Desktop\UniversalAppWinJs\UniversalAppWinJs\UniversalAppWinJs.Windows\bld\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Users\Laurent\Desktop\UniversalAppWinJs\UniversalAppWinJs\UniversalAppWinJs.Windows\bld\Debug\ProjectArchitectures.txt

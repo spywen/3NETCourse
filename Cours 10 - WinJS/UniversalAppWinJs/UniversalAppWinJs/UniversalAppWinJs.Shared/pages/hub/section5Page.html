@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <script src="/pages/hub/section5Page.js"></script>
+</head>
+<body>
+    <!-- TEMPLATES -->
+    <div class="smallListIconTextTemplate" data-win-control="WinJS.Binding.Template" style="display: none">
+        <div class="smallListIconTextItem">
+            <img src="#" class="smallListIconTextItem-Image" data-win-bind="src: picture" />
+            <div class="smallListIconTextItem-Detail">
+                <h4 class="win-h4" data-win-bind="textContent: title"></h4>
+                <h6 class="win-h6" data-win-bind="textContent: text"></h6>
+            </div>
+        </div>
+    </div>
+    <div class="listLayoutTopHeaderTemplate" data-win-control="WinJS.Binding.Template">
+        <div class="listLayoutTopHeaderTemplateRoot">
+            <div data-win-bind="innerHTML: title"></div>
+        </div>
+    </div>
+
+    <div class="fragment section5page">
+        <section aria-label="Main content" role="main">
+            <div>
+                <button>My test button</button>
+            </div>
+            <div>
+                <progress class="win-ring" style="color:white"></progress>
+            </div>
+            <div>
+                <div id="rater"
+                     data-win-control="WinJS.UI.Rating"
+                     data-win-options="{maxRating: 5}">
+                </div>
+            </div>
+            <div>
+                <div id="gpsoption"
+                     data-win-control="WinJS.UI.ToggleSwitch"
+                     data-win-options="{title: 'GPS'}">
+                </div>
+            </div>
+            <div>
+                <input type="text" />
+            </div>
+            <div>
+                <textarea></textarea>
+            </div>
+            <!--<div data-win-control="WinJS.UI.ViewBox">
+                <div>
+                    <img src="/images/image.jpg" height="50" width="50">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing    	elit, sed do eiusmod tempor incididunt ut labore et 	dolore magna aliqua.
+                    </p>
+                </div>
+            </div>-->
+            
+            <!--<div>
+                <h2>Simple ListView</h2>
+                <div id="listView"
+                     class="win-selectionstylefilled"
+                     data-win-control="WinJS.UI.ListView"
+                     data-win-options="{
+                        itemDataSource: HubApps_SectionControls.data.dataSource,
+                        itemTemplate: select('.smallListIconTextTemplate'),
+                        selectionMode: 'none',
+                        tapBehavior: 'none',
+                        layout: { type: WinJS.UI.ListLayout }
+                }">
+                </div>
+            </div>-->
+            <div>
+                <h2>Grouped ListView</h2>
+                <div id="listView"
+                     class="win-selectionstylefilled"
+                     data-win-control="WinJS.UI.ListView"
+                     data-win-options="{
+                    itemDataSource: HubApps_SectionControls.groupedData.dataSource,
+                    itemTemplate: select('.smallListIconTextTemplate'),
+                    groupDataSource: HubApps_SectionControls.groupedData.groups.dataSource,
+                    groupHeaderTemplate: select('.listLayoutTopHeaderTemplate'),
+                    selectionMode: 'none',
+                    tapBehavior: 'none',
+                    layout: { groupHeaderPosition: 'top'}
+                }">
+                </div>
+            </div>
+            
+        </section>
+    </div>
+    <div class="status"></div>
+</body>
+</html>
