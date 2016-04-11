@@ -22,13 +22,11 @@ namespace UniversalAppCsharp.Common
                 HttpResponseMessage message = await client.GetAsync(new Uri("http://api.flickr.com/services/feeds/photos_public.gne?format=json&nojsoncallback=1"));
 
                 string json = await message.Content.ReadAsStringAsync();
+                var rep = JsonConvert.DeserializeObject<RootObject>(json);
 
-                var response = JObject.Parse(json);
-                var items = response["items"];
-                foreach(var photo in items){
-                    var title = (string)photo["title"];
-                    var image = (string)photo["media"]["m"];
-                    Photos.Add(new FlickrPhoto{Title = title, Image = new Windows.UI.Xaml.Media.Imaging.BitmapImage(new Uri(image, UriKind.Absolute))});
+                foreach (var photo in rep.items)
+                {
+                    Photos.Add(new FlickrPhoto { Title = photo.title, Image = new Windows.UI.Xaml.Media.Imaging.BitmapImage(new Uri(photo.media.m, UriKind.Absolute)) });
                 }
             }
             return Photos;
